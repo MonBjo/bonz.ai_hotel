@@ -18,7 +18,7 @@ body {
     transition: 1s;
     padding: 7px 20px;
     border: 3px solid black;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: black;
     
     color: white;
@@ -28,7 +28,7 @@ body {
     font-size: 1.2rem;
     font-weight: 900;
 }
-.button--standard:hover {
+.button--standard:hover, .button--standard:active {
     background-color: white;
     color: black;
     cursor: pointer;
@@ -75,12 +75,20 @@ body {
     color: black;
     border-left: 1px solid rgba(100, 73, 36);
     border-right: 1px solid rgba(100, 73, 36);
+    transition: 1s;
     font-family: "maven pro", sans serif;
     text-decoration: none;
     font-weight: 600;
 }
 
-.header__toggle-menu {
+.header__link:hover, .header__link:active {
+    color: white;
+    background: linear-gradient(
+        rgba(100, 73, 36, 0) 60%, 
+        rgba(100, 73, 36) 100%);
+}
+
+.header__toggle-icon, .header__toggle-checkbox {
     display: none;
 }
 
@@ -106,7 +114,7 @@ main {
     grid-column: 1 / span 6;
     height: 100vh;
     width: 100%;
-    color: wheat;
+    color: white;
     background-color: rgb(100, 73, 36);
     background-image: url("assets/photos/09-night.jpg");
     background-position: top center;
@@ -125,14 +133,6 @@ main {
 .hero__arrow {
     width: 50px;
     filter: invert(100%);
-}
-
-.wave {
-    grid-column: 1 / span 6;
-    height: 20px;
-    background-color: aquamarine;
-    margin-top: -20px;
-    opacity: 0.3;
 }
 
 main div {
@@ -166,6 +166,7 @@ footer img {
         opacity: 1;
         position: fixed;
         animation: floatdown 2s ease-in-out 1 forwards; 
+        z-index: 5;
     }
 
     @keyframes floatdown {
@@ -182,29 +183,41 @@ footer img {
 
 @media screen and (max-width: 650px) {
     .header__nav {
-        display: none;
-    }
-    .header__nav * {
-        width: 90vw;
-        margin: 10px 0;
+        position: absolute;
+        top: -500px;
+        transition: 1s;
+        width: 100%;
+        padding: 20px 50px;
     }
 
     .header__nav ul {
         flex-direction: column;
+        border-left: 1px solid rgba(100, 73, 36);
     }
 
     .header__link {
         border-right: none;
+        transition: 1s;
+        display: block;
+        width: 50%;
+    }
+    .header__link:hover {
+        border-left-width: 10px;
+        background: #00000000;
     }
 
-    .toggle--menu {
+    .header__toggle-icon {
         display: block;
         font-size: 50px;
-        width: 50px;
+        padding: 0 20px;
     }
 
-    .toggle--menu :checked + .header__nav {
-        display: block;
+    .header__toggle-checkbox:checked ~ .header__nav {
+        z-index: -1;
+        top: 0px;
+        padding-top: 100px;
+        background-color: #85858599;
+        box-shadow: 0 3px 5px #85858599;
       }
 }
 
