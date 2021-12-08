@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <meta name="description" content="A short description">
+    <meta name="author" content="MonBjo">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Bonz.ai - AI DRIVEN ECO LIVING</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__img" src="assets/logo/bonz.ai-logo-black-landscape.png">
+        
+        <label class="header__toggle-icon" for="nav-toggle" alt="navigation">&#9776;</label>
+        <input class="header__toggle-checkbox" type="checkbox" id="nav-toggle">
+        
+        <nav class="header__nav nav-toggle">
+            <ul>
+                <li><a href="/index.html" class="header__link">Hem</a></li>
+                <li><a href="#" class="header__link">Våra rum</a></li>
+                <li><a href="#" class="header__link">Restaurang</a></li>
+                <li><a href="#" class="header__link">Om oss</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="button button--header">Kontakt</a>
+    </header>
+
+    <main class="main--notlandingpage">
+        <!-- <div class="filler" tabindex="-1"> </div> -->
+<!-- note: when adding margin to the main the header needs to have a top:; value 
+    in order to not also be pushed down, apparently. -->
+        
+        <article class="booking">
+            <form class="booking__form">
+                <section class="booking__start">
+                    <lable for="checkin">Incheckning:</lable>
+                    <input type="date" id="checkin" value="2022-02-02">
+                </section>
+
+                <section class="booking__end">
+                    <lable for="checkout">Utcheckning:</lable>
+                    <input type="date" id="checkout" value="2022-02-22">
+                </section>
+
+                <section class="booking__guests">
+                    <p>Antal gäster:</p>
+                    <lable for="adults">Vuxna:</lable>
+                    <input type="number" id="adults" aria-valuemin="1" value="1">
+
+                    <lable for="children">Barn:</lable>
+                    <input type="number" id="children" aria-valuemin="0" value="0">
+                </section>
+
+                <label for="cheese">Do you like cheese?</label>
+                <input type="checkbox" id="cheese">
+            </form>
+
+            <section class="booking__rooms">
+                <label for="cheese">Do you still like cheese?</label>
+            </section>
+        </article>
+
+        <aside class="summary">
+            <h2>Din bokning</h2>
+            <section class="summary__checkin">
+                <h3>Incheckning:</h3>
+                <p>På onsdag efter kl 15:00</p>
+                <p>2 Februari 2022</p>
+            </section>
+
+            <section class="summary__checkout">
+                <h3>Utcheckning</h3>
+                <p>På tisdag innan kl 11:00</p>
+                <p>22 Febriari 2022</p>
+            </section>
+
+            <section class="summary__guests">
+                <h3>Gäster</h3>
+                <p>Vuxna: 2</p>
+                <p>Barn: 0</p>
+            </section>
+
+            <section class="summary__action">
+                <p class="summary__price">Summa: 1990kr</p>
+                <a href="#" class="button button--action">Boka nu</a>
+            </section>
+
+        </aside>
+    </main>
+
+    <footer>
+        <img src="assets/photos/330px-EU_Ecolabel_logo.svg.png">
+        <img src="assets/photos/bramiljoval.png">
+        <img src="assets/photos/eu-lovet.png">
+        <img src="assets/photos/Fairtrade logo.png">
+        <img src="assets/photos/krav.png">
+        <img src="assets/photos/svanenmarkt-9036.jpg">
+    </footer>
+</body>
+</html>

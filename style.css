@@ -13,7 +13,11 @@ body {
     font-size: 16px;
 }
 
-.button--standard {
+h1, h2 {
+    font-family: "maven pro", sans serif;
+}
+
+.button {
     opacity: 0.7;
     transition: 1s;
     padding: 7px 20px;
@@ -28,19 +32,20 @@ body {
     font-size: 1.2rem;
     font-weight: 900;
 }
-.button--standard:hover, .button--standard:active {
+.button:hover, .button:active {
     background-color: white;
     color: black;
     cursor: pointer;
 }
 
 
-/************
-    HEADER
- ************/
+/********************
+    HEADER SECTION
+ ********************/
 
 .header {
     position: fixed;
+    top: 0;
     width: 100%;
     background-color: #85858599;
     box-shadow: 0 3px 5px #85858599;
@@ -92,20 +97,27 @@ body {
     display: none;
 }
 
-.header__contact {
+.button--header {
     margin-top: auto;
     margin-bottom: auto;
 }
 
 
-/**********
-    MAIN 
- **********/
+/******************
+    MAIN SECTION 
+ ******************/
 
 main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
+
+.main--notlandingpage {
+    margin-top: 100px;
+}
+
+
+/* -------- MAIN @ INDEX -------- */
 
 /* hero section */
 
@@ -140,6 +152,39 @@ main div {
 }
 
 
+/* -------- MAIN @ BOOKING -------- */
+
+.booking {
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 3;
+    height: 6000px;
+    border: 5px solid #85858599;
+    padding: 20px;
+}
+
+
+.summary {
+    grid-row: 2;
+    grid-column: 5;
+    position: sticky;
+    top: 100px;
+
+    min-width: 300px;
+    margin: 0 10px;
+    border: 5px double #85858599;
+    padding: 20px 40px;
+    background-color: white;
+}
+
+
+.summary__price {
+    text-align: right;
+}
+
+.button--action {
+    background-color: #00000070;
+}
+
 /************
     FOOTER 
  ************/
@@ -160,7 +205,8 @@ footer img {
 
 
 
-/* MEDIAQUERY */
+/* ---------- IN BETWEEN VIEW ---------- */
+
 @media screen and (max-width: 800px) {
     .header__contact {
         opacity: 1;
@@ -180,6 +226,9 @@ footer img {
         }
     }
 }
+
+
+/* ---------- MOBILE VIEW ---------- */
 
 @media screen and (max-width: 650px) {
     .header__nav {
