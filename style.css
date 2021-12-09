@@ -14,11 +14,11 @@ body {
 }
 
 :root {
-    --button-dark: black;
-    --button-light: white;
+    --button-dark: #000000;
+    --button-light: #ffffff;
     --contrast-color: #54eabd;
-    --dark-color: rgb(110, 98, 119);
-    --light-color: rgb(221, 230, 216);
+    --dark-color: #77626e;
+    --light-color: #D8DDE6;
 }
 
 h1, h2 {
