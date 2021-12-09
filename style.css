@@ -12,21 +12,13 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
 }
-                   /*\
-                /***|***\
-            /*******|*******\
-        /***********|***********\
-    /***************|***************\
-/*************>=- DO IT -=<*************\
-|>>===- IMPLEMENT VARIABLE COLORS -===<<|
-\***************************************/
 
 :root {
     --button-dark: black;
     --button-light: white;
     --contrast-color: #54eabd;
     --dark-color: rgb(110, 98, 119);
-    --light-color: rgb(170, 170, 170);
+    --light-color: rgb(221, 230, 216);
 }
 
 h1, h2 {
@@ -110,6 +102,7 @@ h1, h2 {
     display: none;
 }
 
+/* to give it the right height */
 .button--header {
     margin-top: auto;
     margin-bottom: auto;
@@ -129,6 +122,7 @@ main {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 100px;
+    margin-bottom: 200px;
 }
 
 
@@ -164,27 +158,97 @@ main {
 
 main div {
     grid-column: 2 / span 4;
+    background-color: white;
 }
 
 
 /* -------- MAIN @ BOOKING -------- */
 
+/* Booking section */
+
 .booking {
-    grid-row: 2 / span 2;
+    grid-row: 1 / span 2;
     grid-column: 1 / span 4;
-    height: 6000px;
+    height: 1000px;
     padding: 20px;
+    padding-right: 20%;
     background-color: white;
+    border: 1px solid var(--dark-color);
 }
 
+.booking__breadcrumb {
+    text-align: right;
+    margin: 0;
+    font-style: italic;
+}
+.breadcrumb--active {
+    font-weight: bold;
+    color: black;
+}
+
+.booking__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "checkin checkout"
+    "guests guests"
+    "adult child"
+    "room room";
+}
+.booking__form > * {
+    margin-bottom: 20px;
+}
+
+.booking__checkin {
+    grid-area: checkin;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.booking__checkout {
+    grid-area: checkout;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.booking__guests {
+    grid-area: guests;
+
+    margin: 0;
+}
+
+.booking__adultguests {
+    grid-area: adult;
+}
+
+.booking__childguests {
+    grid-area: child;
+}
+
+.booking__adultguests input, .booking__childguests input {
+    width: 40%;
+}
+
+.booking__room {
+    grid-area: room;
+}
+
+
+/* Summary section */
+
 .summary {
-    grid-row: 2;
+    grid-row: 1;
     grid-column: 5 / span 2;
     position: sticky;
     top: 150px;
 
     min-width: 300px;
-    margin: 0 10px;
+    width: 120%;
+    margin-left: -20%;
     border: 5px double var(--dark-color);
     padding: 15px 20px;
     background-color: white;
@@ -252,7 +316,7 @@ main div {
  ************/
  
 footer {
-    background-color: rgb(177, 132, 91);
+    background-color: var(--light-color);
     
     display: flex;
     flex-wrap: wrap;
@@ -270,7 +334,18 @@ footer img {
 /* ---------- IN BETWEEN VIEW ---------- */
 
 @media screen and (max-width: 800px) {
-    .header__contact {
+    
+    .booking__form {
+        grid-template-areas: 
+        "checkin checkin"
+        "checkout checkout"
+        "guests guests"
+        "adult adult"
+        "child child"
+        "room room";
+    }
+
+    .button--header {
         opacity: 1;
         position: fixed;
         animation: floatdown 2s ease-in-out 1 forwards; 
