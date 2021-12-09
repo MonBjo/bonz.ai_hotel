@@ -58,6 +58,7 @@ h1, h2 {
     background-color: var(--dark-color);
     box-shadow: 0 3px 5px var(--dark-color);
     min-height: 60px;
+    z-index: 1; /* for button--header (line ~ 115) so it appears over all other elements */
     
     display: flex;
     flex-wrap:wrap;
@@ -169,6 +170,7 @@ main div {
 .booking {
     grid-row: 1 / span 2;
     grid-column: 1 / span 4;
+
     height: 1000px;
     padding: 20px;
     padding-right: 20%;
@@ -349,7 +351,6 @@ footer img {
         opacity: 1;
         position: fixed;
         animation: floatdown 2s ease-in-out 1 forwards; 
-        z-index: 5;
     }
 
     @keyframes floatdown {
@@ -416,15 +417,24 @@ footer img {
         padding: 20px;
     }
 
+    .booking__form {
+        grid-template-areas: 
+        "checkin checkout"
+        "guests guests"
+        "adult child"
+        "room room";
+    }
+
     .summary {
         grid-row: 2;
-        grid-column: 2 / span 4;
-        position: relative;
-        top: auto;
+        grid-column: 1 / span 6;
+        position:relative;
+        top:0;
     
         min-width: 300px;
         width: 100%;
         margin-left: 0;
+        margin-top: 150px;
     }    
 }
 
