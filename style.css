@@ -126,7 +126,7 @@ main {
 }
 
 
-/* -------- MAIN @ INDEX -------- */
+/* -------- MAIN @ INDEX.HTML -------- */
 
 /* hero section */
 
@@ -162,7 +162,7 @@ main div {
 }
 
 
-/* -------- MAIN @ BOOKING -------- */
+/* -------- MAIN @ BOOKING.HTML -------- */
 
 /* Booking section */
 
@@ -368,6 +368,8 @@ footer img {
 /* ---------- MOBILE VIEW ---------- */
 
 @media screen and (max-width: 650px) {
+
+    /* global */
     .header__nav {
         position: absolute;
         top: -500px;
@@ -404,6 +406,25 @@ footer img {
         padding-top: 100px;
         background-color: var(--dark-color);
         box-shadow: 0 3px 5px var(--dark-color);
-      }
+    }
+
+    /* main @ booking.html */
+    .booking {
+        grid-row: 1;
+        grid-column: 1 / span 6;
+        height: 1000px;
+        padding: 20px;
+    }
+
+    .summary {
+        grid-row: 2;
+        grid-column: 2 / span 4;
+        position: relative;
+        top: auto;
+    
+        min-width: 300px;
+        width: 100%;
+        margin-left: 0;
+    }    
 }
 
