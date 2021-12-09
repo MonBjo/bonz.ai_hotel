@@ -14,7 +14,7 @@
 </head>
 <body>
     <header class="header">
-        <img class="header__img" src="assets/logo/bonz.ai-logo-black-landscape.png">
+        <img class="header__img" src="assets/logo/bonz.ai-logo-color-landscape.png">
         
         <label class="header__toggle-icon" for="nav-toggle" alt="navigation">&#9776;</label>
         <input class="header__toggle-checkbox" type="checkbox" id="nav-toggle">
@@ -31,13 +31,13 @@
         <a href="#" class="button button--header">Kontakt</a>
     </header>
 
-    <main class="main--notlandingpage">
+    <main class="main--booking">
         <!-- <div class="filler" tabindex="-1"> </div> -->
 <!-- note: when adding margin to the main the header needs to have a top:; value 
     in order to not also be pushed down, apparently. -->
         
         <article class="booking">
-            <h1>Boka
+            <h1>Skapa din bokning på Hotel Bonz.ai</h1>
             <form class="booking__form">
                 <section class="booking__start">
                     <lable for="checkin">Incheckning:</lable>
@@ -58,40 +58,53 @@
                     <input type="number" id="children" aria-valuemin="0" value="0">
                 </section>
 
-                <label for="cheese">Do you like cheese?</label>
-                <input type="checkbox" id="cheese">
+                <label for="room-type">Välj rumstyp: </label>
+                <select id="room-type">
+                    <option value=""><span>välj rum</span></option>
+                    <option value="singlemini">Enkelrum mini</option>
+                    <option value="single">Enkelrum</option>
+                    <option value="doublemini">Dubbelrum mini</option>
+                    <option value="double">Dubbelrum</option>
+                    <option value="family">Familj</option>
+                    <option value="doublefancy">Dubbelrum Lyx</option>
+                </select>
             </form>
 
             <section class="booking__rooms">
-                <label for="cheese">Do you still like cheese?</label>
+                <label for="room-type" value="double">dubbelrum</label>
             </section>
         </article>
 
         <aside class="summary">
+            <img class="summary__logo" src="assets/logo/bonz.ai-logo-black-symbol.png" alt="logo">
+
             <h2>Din bokning</h2>
-            <section class="summary__checkin">
-                <h3>Incheckning:</h3>
-                <p>På onsdag efter kl 15:00</p>
-                <p>2 Februari 2022</p>
+
+            <section class="summary__wrapper">
+                <section class="summary__checkin">
+                    <h3>Incheckning:</h3>
+                    <p>På onsdag efter kl 15:00</p>
+                    <p>2 Februari 2022</p>
+                </section>
+
+                <section class="summary__checkout">
+                    <h3>Utcheckning:</h3>
+                    <p>På tisdag före kl 11:00</p>
+                    <p>22 Febriari 2022</p>
+                </section>
             </section>
 
-            <section class="summary__checkout">
-                <h3>Utcheckning</h3>
-                <p>På tisdag innan kl 11:00</p>
-                <p>22 Febriari 2022</p>
-            </section>
+            <p class="summary__nights">2 feb - 22 feb, 20 nätter</p>
 
             <section class="summary__guests">
-                <h3>Gäster</h3>
-                <p>Vuxna: 2</p>
-                <p>Barn: 0</p>
+                <h3>Gäster:</h3>
+                    <p>2 vuxna och 0 barn i Dubbelrum mini</p>
             </section>
 
             <section class="summary__action">
                 <p class="summary__price">Summa: 1990kr</p>
-                <a href="#" class="button button--action">Boka nu</a>
+                <a href="#" class="button button--booking">Boka nu</a>
             </section>
-
         </aside>
     </main>
 
