@@ -37,42 +37,47 @@
     in order to not also be pushed down, apparently. -->
         
         <article class="booking">
+            <p class="booking__breadcrumb"><span class="breadcrumb--active">1. Välj rum</span> > 2. Uppgifter > 3. Slutför bokning</p>
             <h1>Skapa din bokning på Hotel Bonz.ai</h1>
             <form class="booking__form">
-                <section class="booking__start">
+                <section class="booking__checkin">
                     <lable for="checkin">Incheckning:</lable>
                     <input type="date" id="checkin" value="2022-02-02">
                 </section>
 
-                <section class="booking__end">
+                <section class="booking__checkout">
                     <lable for="checkout">Utcheckning:</lable>
                     <input type="date" id="checkout" value="2022-02-22">
                 </section>
 
-                <section class="booking__guests">
-                    <p>Antal gäster:</p>
-                    <lable for="adults">Vuxna:</lable>
-                    <input type="number" id="adults" aria-valuemin="1" value="1">
+                <p class="booking__guests">Antal gäster:</p>
 
-                    <lable for="children">Barn:</lable>
-                    <input type="number" id="children" aria-valuemin="0" value="0">
+                <section class="booking__adultguests">
+                    <lable for="adults">Vuxna:</lable>
+                    <input type="number" id="adults" value="1">
                 </section>
 
-                <label for="room-type">Välj rumstyp: </label>
-                <select id="room-type">
-                    <option value=""><span>välj rum</span></option>
-                    <option value="singlemini">Enkelrum mini</option>
-                    <option value="single">Enkelrum</option>
-                    <option value="doublemini">Dubbelrum mini</option>
-                    <option value="double">Dubbelrum</option>
-                    <option value="family">Familj</option>
-                    <option value="doublefancy">Dubbelrum Lyx</option>
-                </select>
-            </form>
+                <section class="booking__childguests">
+                    <lable for="children">Barn:</lable>
+                    <input type="number" id="children" value="0">
+                </section>
 
-            <section class="booking__rooms">
-                <label for="room-type" value="double">dubbelrum</label>
-            </section>
+                <!--===---===---===----===---===---===-->
+                <!-- CHANGE TO RADION BUTTONS INSTEAD -->
+                <!--===---===---===----===---===---===-->
+                <section class="booking__room">
+                    <label for="room-type">Välj rumstyp: </label>
+                    <select id="room-type">
+                        <option value=""><span>välj rum</span></option>
+                        <option value="singlemini">Enkelrum mini</option>
+                        <option value="single">Enkelrum</option>
+                        <option value="doublemini" selected>Dubbelrum mini</option>
+                        <option value="double">Dubbelrum</option>
+                        <option value="family">Familj</option>
+                        <option value="doublefancy">Dubbelrum Lyx</option>
+                    </select>
+                </section>
+            </form>
         </article>
 
         <aside class="summary">
