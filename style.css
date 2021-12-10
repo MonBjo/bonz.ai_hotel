@@ -11,6 +11,11 @@ body {
     overflow-x: hidden;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
+
+    background-image: url(/assets/photos/zuriel-galindo-UNaeULgP8X0-unsplash_edited.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 :root {
@@ -19,6 +24,7 @@ body {
     --contrast-color: #54eabd;
     --dark-color: #77626e;
     --light-color: #D8DDE6;
+    --shadow-color: #00000070;
 }
 
 h1, h2 {
@@ -118,6 +124,9 @@ main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
+main > * {
+    box-shadow: -2px 4px 10px 0px var(--shadow-color);
+}
 
 .main--booking {
     margin-left: 5%;
@@ -168,10 +177,9 @@ main div {
 /* Booking section */
 
 .booking {
-    grid-row: 1 / span 2;
-    grid-column: 1 / span 4;
+    grid-row: 1;
+    grid-column: 1 / span 4; 
 
-    height: 1000px;
     padding: 20px;
     padding-right: 20%;
     background-color: white;
@@ -242,27 +250,124 @@ main div {
 }
 
 
-/* Roomwrapper section */
+/* Roominfo section */
 
-.roomwrapper {
+.roominfo {
     grid-row: 3;
     grid-column: 1 / span 4;
 
-    height: 500px;
-    border: 1px solid blue;
+    margin-top: 50px;
+    border: 1px solid var(--dark-color);
+    padding: 20px;
+    padding-right: 20%;
+    background-color: white;
+}
+
+.roominfo__alwaysincluded {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+
+.roominfo__room {
+    margin: 30px auto;
+    border-left: 1px solid var(--dark-color);
+    padding: 10px 5px;
+}
+
+.roominfo__image {
+    max-width: 60%;
+    margin: 5px;
+    border: 5px double var(--dark-color);
+    float:left;
+}
+
+.roominfo__textwrapper {
+    text-align: justify;
+}
+
+
+.roominfo__facilities {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.roominfo__facility {
+    width: fit-content;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.roominfo__facilityimg {
+    height: 25px;
+    margin-right: 5px;
+    border-left: 1px solid var(--dark-color);
+    padding-left: 5px;
+}
+
+
+.roominfo__action {
+    margin-top: 20px;
+    border-top: 1px solid var(--dark-color);
+    padding-right: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.button--roominfo {
+    opacity: 0.9;
+    background-color: var(--button-light);
+    color: var(--button-dark);
+    border-radius: 0px;
+    border-width: 1px;
+    margin: auto 0;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.button--roominfo:hover, .button--roominfo:active {
+    background-color: var(--dark-color);
+}
+
+
+
+.room--selected {
+    border: 1px double var(--dark-color);
+    box-shadow: -2px 4px 10px 0px var(--shadow-color);
+}
+
+.button--selected, .button--selected:hover, .button--selected:active {
+    opacity: 0.7;
+    background-color: var(--button-dark);
+    color: var(--button-light);
+    border-radius: 0px;
+    border-width: 1px;
+    margin: auto 0;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 
 /* Summary section */
 
 .summary {
-    grid-row: 1;
+    grid-row: 1 / span 3;
     grid-column: 5 / span 2;
     position: sticky;
     top: 150px;
 
     min-width: 300px;
     width: 120%;
+    height: fit-content;
     margin-left: -20%;
     border: 5px double var(--dark-color);
     padding: 15px 20px;
@@ -322,9 +427,13 @@ main div {
     padding-left: 30%;
     padding-right: 30%;
 }
-.button--booking:hover, button--booking:active {
+.button--booking:hover, .button--booking:active {
     background-color: var(--dark-color);
 }
+
+
+/* -------- MAIN @ ABOUTUS.HTML -------- */
+
 
 
 
@@ -377,6 +486,15 @@ footer img {
             top: 92vh;
             right: 15px;
         }
+    }
+
+
+    .roominfo__image {
+        max-width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
+        float: center;
     }
 }
 
@@ -431,7 +549,6 @@ footer img {
     .booking {
         grid-row: 1;
         grid-column: 1 / span 6;
-        height: 1000px;
         padding: 20px;
     }
 
@@ -444,10 +561,11 @@ footer img {
     }
 
 
-    .roomwrapper {
+    .roominfo {
         grid-row: 2;
         grid-column: 1 / span 6;
-    }    
+        padding: 20px;
+    }
 
 
     .summary {

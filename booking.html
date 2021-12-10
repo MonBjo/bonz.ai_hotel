@@ -22,7 +22,7 @@
         <nav class="header__nav nav-toggle">
             <ul>
                 <li><a href="/index.html" class="header__link">Hem</a></li>
-                <li><a href="#" class="header__link">Våra rum</a></li>
+                <li><a href="booking.html" class="header__link">Boka rum</a></li>
                 <li><a href="#" class="header__link">Restaurang</a></li>
                 <li><a href="#" class="header__link">Om oss</a></li>
             </ul>
@@ -33,7 +33,7 @@
 
     <main class="main--booking">
         <article class="booking">
-            <p class="booking__breadcrumb"><span class="breadcrumb--active">1. Välj rum</span> > 2. Uppgifter > 3. Slutför bokning</p>
+            <p class="booking__breadcrumb"><span class="breadcrumb--active">1. Skapa bokning</span> > 2. Uppgifter > 3. Slutför bokning</p>
             <h1>Skapa din bokning på Hotel Bonz.ai</h1>
             <form class="booking__form">
                 <section class="booking__checkin">
@@ -50,7 +50,7 @@
 
                 <section class="booking__adultguests">
                     <lable for="adults">Vuxna:</lable>
-                    <input type="number" id="adults" value="1">
+                    <input type="number" id="adults" value="2">
                 </section>
 
                 <section class="booking__childguests">
@@ -63,23 +63,322 @@
                 <!--===---== ...or something ==---===-->
                 <!--===---===---===---===---===---===-->
                 <section class="booking__room">
-                    <label for="room-type">Välj rumstyp: </label>
-                    <select id="room-type">
-                        <option value=""><span>välj rum</span></option>
-                        <option value="singlemini">Enkelrum mini</option>
-                        <option value="single">Enkelrum</option>
-                        <option value="doublemini" selected>Dubbelrum mini</option>
-                        <option value="double">Dubbelrum</option>
-                        <option value="family">Familj</option>
-                        <option value="doublefancy">Dubbelrum Lyx</option>
-                    </select>
+                    <p>Välj rum:</p>
+                    <section>
+                        <input type="radio" id="singlemini" name="room">
+                        <lable for="singlemini">Enkelrum mini</lable>
+                    </section>
+                    
+                    <section>
+                        <input type="radio" id="single">
+                        <lable for="single">Enkelrum</lable>
+                    </section>
+                    
+                    <section>
+                        <input type="radio" id="doublemini" name="room" checked>
+                        <lable for="doublemini">Dubbelrum mini</lable>
+                    </section>
+                    
+                    <section>
+                        <input type="radio" id="double" name="room">
+                        <lable for="double">Dubbelrum</lable>
+                    </section>
+                    
+                    <section>
+                        <input type="radio" id="doublefancy" name="room">
+                        <lable for="doublefancy">Dubbelrum Lyx</lable>
+                    </section>
+                    
+                    <section>
+                        <input type="radio" id="family" name="room">
+                        <lable for="family">Familj</lable>
+                    </section>
                 </section>
             </form>
         </article>
 
-        <article class="roomwrapper">
-            sum content
-        </article>
+        <section class="roominfo">
+            <h2>Våra rum</h2>
+            
+            <section class="roominfo__alwaysincluded">
+                <h4>Detta ingår alltid när du bokar rum hos oss:</h4>
+
+                <section class="roominfo__facilities">
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-bathtub-64.png" class="roominfo__facilityimg">
+                        <figcaption>Dusch eller badkar</figcaption>
+                    </figure>
+                    
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-wi-fi-50.png" class="roominfo__facilityimg">
+                        <figcaption>Gratis wifi</figcaption>
+                    </figure>
+                    
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-buffet-breakfast-50.png" class="roominfo__facilityimg">
+                        <figcaption>Frukostbuffe</figcaption>
+                    </figure>
+                    
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-compass-50.png" class="roominfo__facilityimg">
+                        <figcaption>Information om området</figcaption>
+                    </figure>
+                    
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-treasure-map-50.png" class="roominfo__facilityimg">
+                        <figcaption>Karta över leder</figcaption>
+                    </figure>
+                    
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-retro-tv-50.png" class="roominfo__facilityimg">
+                        <figcaption>Sattelit-tv</figcaption>
+                    </figure>
+                    
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-hair-dryer-50.png" class="roominfo__facilityimg">
+                        <figcaption>Hårtork</figcaption>
+                    </figure>
+                    
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-iron-50.png" class="roominfo__facilityimg">
+                        <figcaption>Strykbräda och strykjärn</figcaption>
+                    </figure>
+                    
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-mini-bar-50.png" class="roominfo__facilityimg">
+                        <figcaption>Minibar</figcaption>
+                    </figure>
+                </section>
+            </section>
+
+            <!--===-- Enkelrum mini --===-->
+            <article class="roominfo__room">
+                <img src="assets/photos/06-day.jpg" class="roominfo__image" 
+                alt="========== hidden description ==========">
+                
+                <section class="roominfo__textwrapper">
+                    <h3 class="roominfo__roomtitle">Enkelrum mini</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo optio esse laborum. Sed nostrum ducimus, delectus enim possimus provident quo sequi nobis hic asperiores aut qui et beatae optio totam.</p>
+                </section>
+
+                <section class="roominfo__facilities">
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-empty-bed-50.png" class="roominfo__facilityimg">
+                        <figcaption>Enkelsäng, 90cm</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-page-size-50.png" class="roominfo__facilityimg">
+                        <figcaption>Rumsstorlek 10kvm </figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-bathtub-64.png" class="roominfo__facilityimg">
+                        <figcaption>Dusch</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-tall-person-50.png" class="roominfo__facilityimg">
+                        <figcaption>1 person</figcaption>
+                    </figure>
+                </section>
+                
+                <section class="roominfo__action">
+                    <h3>Pris: 890:-</h3>
+                    <a href="#" class="button button--roominfo">Välj</a>
+                </section>
+            </article>
+
+            <!--===-- Enkelrum --===-->
+            <article class="roominfo__room">
+                <img src="assets/photos/05-day.jpg" class="roominfo__image" 
+                alt="========== hidden description ==========">
+                
+                <section class="roominfo__textwrapper">
+                    <h3 class="roominfo__roomtitle">Enkelrum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo optio esse laborum. Sed nostrum ducimus, delectus enim possimus provident quo sequi nobis hic asperiores aut qui et beatae optio totam.</p>
+                </section>
+
+                <section class="roominfo__facilities">
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-empty-bed-50.png" class="roominfo__facilityimg">
+                        <figcaption>Enkelsäng, 90cm</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-page-size-50.png" class="roominfo__facilityimg">
+                        <figcaption>Rumsstorlek 15kvm </figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-bathtub-64.png" class="roominfo__facilityimg">
+                        <figcaption>Badkar</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-tall-person-50.png" class="roominfo__facilityimg">
+                        <figcaption>1 person</figcaption>
+                    </figure>
+                </section>
+                
+                <section class="roominfo__action">
+                    <h3>Pris: 1090:-</h3>
+                    <a href="#" class="button button--roominfo">Välj</a>
+                </section>
+            </article>
+
+            <!--===-- Dubbelrum mini --===-->
+            <article class="roominfo__room room--selected">
+                <img src="assets/photos/07-day.jpg" class="roominfo__image" 
+                alt="========== hidden description ==========">
+                
+                <section class="roominfo__textwrapper">
+                    <h3 class="roominfo__roomtitle">Dubbelrum mini</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo optio esse laborum. Sed nostrum ducimus, delectus enim possimus provident quo sequi nobis hic asperiores aut qui et beatae optio totam.</p>
+                </section>
+
+                <section class="roominfo__facilities">
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-empty-bed-50.png" class="roominfo__facilityimg">
+                        <figcaption>Dubbelsäng, 160cm</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-page-size-50.png" class="roominfo__facilityimg">
+                        <figcaption>Rumsstorlek 15kvm </figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-bathtub-64.png" class="roominfo__facilityimg">
+                        <figcaption>Dusch</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-tall-person-50.png" class="roominfo__facilityimg">
+                        <figcaption>1 personer</figcaption>
+                    </figure>
+                </section>
+                
+                <section class="roominfo__action">
+                    <h3>Pris: 1090:-</h3>
+                    <a href="#" class="button button--selected">Vald</a>
+                </section>
+            </article>
+
+            <!--===-- Dubbelrum --===-->
+            <article class="roominfo__room">
+                <img src="assets/photos/03-day.jpg" class="roominfo__image" 
+                alt="========== hidden description ==========">
+                
+                <section class="roominfo__textwrapper">
+                    <h3 class="roominfo__roomtitle">Dubbelrum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo optio esse laborum. Sed nostrum ducimus, delectus enim possimus provident quo sequi nobis hic asperiores aut qui et beatae optio totam.</p>
+                </section>
+
+                <section class="roominfo__facilities">
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-empty-bed-50.png" class="roominfo__facilityimg">
+                        <figcaption>Dubbelsäng 160cm</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-page-size-50.png" class="roominfo__facilityimg">
+                        <figcaption>Rumsstorlek 20kvm </figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-bathtub-64.png" class="roominfo__facilityimg">
+                        <figcaption>Badkar</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-tall-person-50.png" class="roominfo__facilityimg">
+                        <figcaption>2 personer</figcaption>
+                    </figure>
+                </section>
+                
+                <section class="roominfo__action">
+                    <h3>Pris: 1490:-</h3>
+                    <a href="#" class="button button--roominfo">Välj</a>
+                </section>
+            </article>
+
+            <!--===-- Dubbelrum lyx --===-->
+            <article class="roominfo__room">
+                <img src="assets/photos/02-day.jpg" class="roominfo__image" 
+                alt="========== hidden description ==========">
+                
+                <section class="roominfo__textwrapper">
+                    <h3 class="roominfo__roomtitle">Dubbelrum lyx</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo optio esse laborum. Sed nostrum ducimus, delectus enim possimus provident quo sequi nobis hic asperiores aut qui et beatae optio totam.</p>
+                </section>
+
+                <section class="roominfo__facilities">
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-empty-bed-50.png" class="roominfo__facilityimg">
+                        <figcaption>1 dubbelsäng, 180cm</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-page-size-50.png" class="roominfo__facilityimg">
+                        <figcaption>Rumsstorlek 30kvm </figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-bathtub-64.png" class="roominfo__facilityimg">
+                        <figcaption>Badkar</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-tall-person-50.png" class="roominfo__facilityimg">
+                        <figcaption>2 personer</figcaption>
+                    </figure>
+                </section>
+                
+                <section class="roominfo__action">
+                    <h3>Pris: 1690:-</h3>
+                    <a href="#" class="button button--roominfo">Välj</a>
+                </section>
+            </article>
+
+            <!--===-- Familj --===-->
+            <article class="roominfo__room">
+                <img src="assets/photos/01-day.jpg" class="roominfo__image" 
+                alt="========== hidden description ==========">
+                
+                <section class="roominfo__textwrapper">
+                    <h3 class="roominfo__roomtitle">Familj</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo optio esse laborum. Sed nostrum ducimus, delectus enim possimus provident quo sequi nobis hic asperiores aut qui et beatae optio totam.</p>
+                </section>
+
+                <section class="roominfo__facilities">
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-empty-bed-50.png" class="roominfo__facilityimg">
+                        <figcaption>1 dubbelsäng, 160cm + 2 våningssängar, 90cm</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-page-size-50.png" class="roominfo__facilityimg">
+                        <figcaption>Rumsstorlek 40kvm </figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-bathtub-64.png" class="roominfo__facilityimg">
+                        <figcaption>Badkar</figcaption>
+                    </figure>
+
+                    <figure class="roominfo__facility">
+                        <img src="assets/icons/icons8-tall-person-50.png" class="roominfo__facilityimg">
+                        <figcaption>6 personer</figcaption>
+                    </figure>
+                </section>
+                
+                <section class="roominfo__action">
+                    <h3>Pris: 1890:-</h3>
+                    <a href="#" class="button button--roominfo">Välj</a>
+                </section>
+            </article>
+        </section>
         
         <aside class="summary">
             <img class="summary__logo" src="assets/logo/bonz.ai-logo-black-symbol.png" alt="logo">
