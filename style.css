@@ -188,6 +188,7 @@ main div {
     color: black;
 }
 
+/* form start */
 .booking__form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -234,9 +235,21 @@ main div {
 .booking__adultguests input, .booking__childguests input {
     width: 40%;
 }
+/* form end */
 
 .booking__room {
     grid-area: room;
+}
+
+
+/* Roomwrapper section */
+
+.roomwrapper {
+    grid-row: 3;
+    grid-column: 1 / span 4;
+
+    height: 500px;
+    border: 1px solid blue;
 }
 
 
@@ -313,6 +326,8 @@ main div {
     background-color: var(--dark-color);
 }
 
+
+
 /************
     FOOTER 
  ************/
@@ -371,6 +386,7 @@ footer img {
 @media screen and (max-width: 650px) {
 
     /* global */
+
     .header__nav {
         position: absolute;
         top: -500px;
@@ -409,7 +425,9 @@ footer img {
         box-shadow: 0 3px 5px var(--dark-color);
     }
 
+
     /* main @ booking.html */
+
     .booking {
         grid-row: 1;
         grid-column: 1 / span 6;
@@ -425,8 +443,15 @@ footer img {
         "room room";
     }
 
-    .summary {
+
+    .roomwrapper {
         grid-row: 2;
+        grid-column: 1 / span 6;
+    }    
+
+
+    .summary {
+        grid-row: 3;
         grid-column: 1 / span 6;
         position:relative;
         top:0;
