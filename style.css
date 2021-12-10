@@ -449,29 +449,42 @@ main > * {
 }
 
 
+
 /* -------- MAIN @ ABOUTUS.HTML -------- */
 
-
+.sumcode {
+    color: no;
+}
 
 
 /************
     FOOTER 
  ************/
  
-footer {
+.footer {
     background-color: var(--light-color);
+    padding: 50px 0;
     
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
 }
-footer img {
+
+.footer__image {
     max-height: 70px;
     margin: 10px 40px;
 }
 
+.footer__text {
+   margin: 0; 
+}
+
+.footer__sauce ul {
+    list-style: none;
+    padding-left: 0;
+}
 
 
 /* ---------- IN BETWEEN VIEW ---------- */
