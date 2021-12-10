@@ -134,7 +134,7 @@ main > * {
     border: 1px solid var(--dark-color);
 }
 
-.main--booking {
+.main--booking, .main--aboutus {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 100px;
@@ -182,6 +182,7 @@ main > * {
     background-color: white;
     margin: 50px 0;
 }
+
 .activities__card {
     padding: 10px;
 
@@ -201,7 +202,6 @@ main > * {
     font-style: italic;
     font-size: 0.9rem;
     color: var(--dark-color);
-    flex: 1;
 }
 
 
@@ -399,7 +399,7 @@ main > * {
     position: sticky;
     top: 150px;
 
-    min-width: 300px;
+    min-width: 250px;
     width: 120%;
     height: fit-content;
     margin-left: -20%;
@@ -469,11 +469,26 @@ main > * {
 
 /* -------- MAIN @ ABOUTUS.HTML -------- */
 
-.sumcode {
-    color: no;
+.aboutus {
+    grid-row: 1;
+    grid-column: 2 / span 4;
+
+    padding: 30px 50px;
+    line-height: 1.5rem;
+    background-color: white;
 }
 
+.aboutus__image {
+    width: 50%;
+    float: right;
+}
 
+.aboutus__imageby {
+    font-style: italic;
+    font-size: 0.9rem;
+    text-align: right;
+    color: var(--dark-color);
+}
 
 
 /*===============================*\
@@ -541,12 +556,35 @@ main > * {
     }
 
 
+    .activities__card {
+        flex-direction: column;
+    }
+
+    .card--middle {
+        flex-direction: column-reverse;
+    }
+
+    .activities__text {
+        width: 100%;
+    }
+    
+    .activities__imagewrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+
     .roominfo__image {
         max-width: 100%;
         margin: 0;
         margin-bottom: 20px;
         padding: 0;
         float: center;
+    }
+
+    
+    .aboutus__image {
+        width: 100%;
     }
 }
 
