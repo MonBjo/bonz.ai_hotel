@@ -53,9 +53,12 @@ h1, h2 {
 }
 
 
-/********************
-    HEADER SECTION
- ********************/
+
+
+/*===============================*\
+ ------------ HEADER -------------
+\*===============================*/
+
 
 .header {
     position: fixed;
@@ -116,9 +119,11 @@ h1, h2 {
 }
 
 
-/******************
-    MAIN SECTION 
- ******************/
+
+/*=============================*\
+ ------------ MAIN -------------
+\*=============================*/
+
 
 main {
     display: grid;
@@ -168,25 +173,37 @@ main > * {
 }
 
 
-/* activites section */
+/* activities section */
 
-.activites {
+.activities {
     grid-row: 2;
     grid-column: 2 / span 4;
 
     background-color: white;
     margin: 50px 0;
 }
+.activities__card {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.activities__text, .activities__imagewrapper {
+    width: 50%;
+}
 
 .activities__image {
     width: 100%;
 }
 
-.activites__imagetext {
+.activities__imagetext {
     font-style: italic;
     font-size: 0.9rem;
     color: var(--dark-color);
+    flex: 1;
 }
+
 
 
 
@@ -457,13 +474,16 @@ main > * {
 }
 
 
-/************
-    FOOTER 
- ************/
+
+
+/*===============================*\
+ ------------ FOOTER -------------
+\*===============================*/
  
 .footer {
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
     padding: 50px 0;
+    color:white;
     
     display: flex;
     flex-wrap: wrap;
@@ -487,7 +507,9 @@ main > * {
 }
 
 
-/* ---------- IN BETWEEN VIEW ---------- */
+/*===============================*\
+ -------- INBETWEEN VIEW ---------
+\*===============================*/
 
 @media screen and (max-width: 800px) {
     
@@ -529,7 +551,9 @@ main > * {
 }
 
 
-/* ---------- MOBILE VIEW ---------- */
+/*===============================*\
+ ---------- MOBILE VIEW ----------
+\*===============================*/
 
 @media screen and (max-width: 650px) {
 
